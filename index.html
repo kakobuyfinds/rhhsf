@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>OrientDig spreadsheet | Schoenen, kleding en QC vergelijken</title>
+  <meta name="description" content="Vergelijk sneakers, kleding en accessoires met deze OrientDig spreadsheet-gids. Bekijk tien categorieën en controleer productlinks, maten, QC-foto’s en bezorgkosten.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="OrientDig spreadsheet | Schoenen, kleding en QC vergelijken">
+  <meta property="og:description" content="Kies een categorie en vergelijk productvarianten, maten, QC-foto’s en bezorgkosten.">
+  <meta name="theme-color" content="#101a30">
+  <!-- index.html
+  Zoekonderzoek: de eerste Google-pagina voor Nederland kon niet rechtstreeks worden geverifieerd.
+  Tien domeinen uit de beschikbare webresultaten, zonder geverifieerde Google-volgorde:
+  orientdigindex.com (bron en variant), orientdigi.com (vondsten en QC),
+  orientdigwithqc.com (categorieën en QC), orientdigs.com (categorieën en productfoto’s),
+  orientdig.net (productregels en FAQ), orientdigsheets.org (controlelijsten),
+  orientdig-sheet.com (zoeken op naam of bronlink), qcradar.com (Weidian en Taobao),
+  spreadsheet-orientdig.com (vondsten en links), orientdigspreadsheet.net (zoekgids).
+  Secundaire zoektermen: OrientDig productlinks, OrientDig QC-foto’s, OrientDig maattabel, OrientDig verzendkosten.
+  Longtailtermen: OrientDig spreadsheet schoenen, OrientDig sneakermaat vergelijken, binnenzool meten in centimeters,
+  EU-schoenmaat controleren, Nike sneaker zoolprofiel bekijken, QC-foto’s van de hiel, neusvorm van sneakers vergelijken,
+  OrientDig hoodie maat vergelijken, borstbreedte van een hoodie meten, mouwlengte van een jas meten,
+  T-shirt lengte plat meten, taillebreedte van een broek vergelijken, binnenbeenlengte van een broek meten,
+  petomtrek in centimeters, afmetingen van een tas controleren, armband polsomtrek meten,
+  Weidian productlink controleren, Taobao productvariant vergelijken, 1688 productlink bewaren,
+  QC-foto’s van dezelfde variant, ontbrekende QC-foto’s opvragen, productlink opnieuw controleren,
+  verzendgewicht van een pakket, bezorgkosten voor Nederland, bezorgkosten voor België,
+  invoerkosten bij levering, totaalprijs in euro berekenen, retourvoorwaarden voor internationale bestellingen.
+  -->
+  <style>
+    :root{color-scheme:light;--ink:#101a30;--paper:#f5f7fb;--white:#fff;--line:#c8d1df;--muted:#42516a;--accent:#f8e45e}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.58 system-ui,sans-serif}
+    a{color:inherit}
+    :focus-visible{outline:3px solid #3264d0;outline-offset:4px}
+    .wrap{width:min(70rem,calc(100% - 2rem));margin-inline:auto}
+    header,.hero,footer{background:var(--ink);color:var(--white)}
+    header .wrap,footer .wrap{padding-block:1rem}
+    header a{font-weight:800;text-decoration:none}
+    .hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:2rem;align-items:center;padding-block:clamp(1.5rem,5vw,4rem)}
+    h1,h2,h3,p,figure{margin:0}
+    h1{font-size:clamp(2.35rem,6vw,5rem);letter-spacing:-.07em;line-height:.98}
+    h2{font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.15;letter-spacing:-.035em}
+    h3{font-size:1.22rem;line-height:1.3}
+    p{margin-top:.7rem}
+    .hero p{max-width:49ch;color:#e5ebf5}
+    .hero img,.gallery img{display:block;width:100%;height:auto;object-fit:contain;background:#fff}
+    .hero img{aspect-ratio:4/3;border-radius:.65rem}
+    .category{margin-top:1.25rem;background:var(--accent);padding:clamp(1rem,3vw,1.7rem);border-radius:.65rem}
+    .category ul,.gallery{display:grid;gap:.65rem}
+    .category ul{grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr));list-style:none;padding:0;margin:1rem 0 0}
+    .category a{display:flex;align-items:center;min-height:44px;padding:.55rem .7rem;background:var(--white);border-radius:.35rem;text-decoration:none;font-weight:700;line-height:1.25}
+    .category a:hover{text-decoration:underline}
+    main section+section{margin-top:clamp(2rem,5vw,3.5rem)}
+    .table{overflow-x:auto;margin-top:1rem;border:1px solid var(--line);border-radius:.55rem;background:var(--white)}
+    table{border-collapse:collapse;width:100%;min-width:34rem;text-align:left}
+    caption{text-align:left;padding:.75rem 1rem;color:var(--muted)}
+    th,td{padding:.65rem .85rem;border-top:1px solid var(--line);vertical-align:top}
+    thead{background:#e6ecf6}
+    .articles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem}
+    article,figure,details{background:var(--white);border:1px solid var(--line);border-radius:.55rem}
+    article{padding:1rem}
+    .gallery{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:1rem}
+    figure{overflow:hidden}
+    .gallery img{aspect-ratio:1}
+    figcaption{padding:.7rem;color:var(--muted)}
+    details{margin-top:.65rem;padding:.7rem 1rem}
+    summary{cursor:pointer;font-weight:750}
+    footer{margin-top:3rem}
+    footer p{color:#e5ebf5}
+    @media(max-width:680px){.hero .wrap,.articles{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.hero img{max-height:18rem}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "name":"OrientDig spreadsheet | Schoenen, kleding en QC vergelijken",
+    "inLanguage":"nl",
+    "mainEntity":[
+      {"@type":"Question","name":"Wat is een OrientDig spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Een OrientDig spreadsheet is een overzicht van productlinks, meestal gegroepeerd per categorie. Afhankelijk van de lijst staan er ook foto’s, maatnotities of verwijzingen naar kwaliteitscontroles bij."}},
+      {"@type":"Question","name":"Wat als een productlink niet meer werkt?","acceptedAnswer":{"@type":"Answer","text":"Zoek op de productnaam of het artikelnummer en controleer bij een nieuwe vermelding opnieuw de verkoper, kleur, maat en retourvoorwaarden."}},
+      {"@type":"Question","name":"Bewijzen QC-foto’s dat een merkartikel echt is?","acceptedAnswer":{"@type":"Answer","text":"Nee. QC-foto’s helpen zichtbare details, afmetingen en afwerking te beoordelen. Vraag voor een aankoop waarbij echtheid telt om verifieerbare herkomstinformatie."}},
+      {"@type":"Question","name":"Waar vind ik de bezorgkosten voor Nederland of België?","acceptedAnswer":{"@type":"Answer","text":"Bekijk de actuele bezorgopties bij de aanbieder voor je postcode en pakketgegevens. Controleer welke toeslagen, belastingen of invoerkosten al in het getoonde totaal zijn verwerkt."}}
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/rhhsf/">
+</head>
+<body>
+  <header>
+    <div class="wrap"><a href="https://www.cafans.com">www.cafans.com</a></div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="titel">
+      <div class="wrap">
+        <div>
+          <h1 id="titel">OrientDig spreadsheet</h1>
+          <p>Gebruik deze Nederlandstalige gids om schoenen, kleding en accessoires te vergelijken. Open een categorie en controleer vervolgens of de productlink, maat en foto’s bij dezelfde uitvoering horen.</p>
+        </div>
+        <img src="https://asset.snipes.com/images/f_auto%2Cq_100/01792193_1/Nike---Air-Max-90-wei%C3%9F" width="640" height="480" fetchpriority="high" loading="eager" decoding="async" alt="Witte Nike Air Max 90 met een zichtbaar luchtkussen in de hiel">
+      </div>
+    </section>
+    <div class="wrap">
+      <nav class="category" aria-labelledby="categorieen">
+        <h2 id="categorieen">Categorieën op CAFans</h2>
+        <ul>
+          <li><a href="https://cafans.com/category-911-Shoes.html" lang="en">Shoes</a></li>
+          <li><a href="https://cafans.com/category-912-Hoodies%2FSweaters.html" lang="en">Hoodies/Sweaters</a></li>
+          <li><a href="https://cafans.com/category-913-T-Shirts.html" lang="en">T-Shirts</a></li>
+          <li><a href="https://cafans.com/category-914-Jackets.html" lang="en">Jackets</a></li>
+          <li><a href="https://cafans.com/category-915-Pants%2FShorts.html" lang="en">Pants/Shorts</a></li>
+          <li><a href="https://cafans.com/category-916-Headwear.html" lang="en">Headwear</a></li>
+          <li><a href="https://cafans.com/category-917-Sets.html" lang="en">Sets</a></li>
+          <li><a href="https://cafans.com/category-918-underwear%2Funderpants.html" lang="en">Underwear/underpants</a></li>
+          <li><a href="https://cafans.com/category-919-Jersey.html" lang="en">Jersey</a></li>
+          <li><a href="https://cafans.com/category-920-Accessories.html" lang="en">Accessories</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="vergelijk" style="margin-top:2.5rem">
+        <h2 id="vergelijk">Wat vergelijk je per categorie?</h2>
+        <div class="table" role="region" aria-labelledby="vergelijk" tabindex="0">
+          <table>
+            <caption>Noteer de exacte uitvoering en gebruik dezelfde meetmethode voor beide opties.</caption>
+            <thead><tr><th scope="col">Categorie</th><th scope="col">Maat of uitvoering</th><th scope="col">Detail op de foto</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Sneakers</th><td>EU-schoenmaat en lengte van de binnenzool in centimeters</td><td>Zoolprofiel, hiel en neusvorm</td></tr>
+              <tr><th scope="row">Hoodies en T-shirts</th><td>Borstbreedte en ruglengte, plat gemeten</td><td>Boorden, naden en plaats van de print</td></tr>
+              <tr><th scope="row">Jassen</th><td>Mouwlengte en ruimte voor een extra laag</td><td>Voering, rits en zaksluitingen</td></tr>
+              <tr><th scope="row">Broeken en shorts</th><td>Taillebreedte en binnenbeenlengte</td><td>Sluiting, zoom en vorm van de pijp</td></tr>
+              <tr><th scope="row">Petten, tassen en sieraden</th><td>Petomtrek, tasafmetingen of polsomtrek</td><td>Verstelband, hengsels en sluitingen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section aria-labelledby="beelden">
+        <h2 id="beelden">Productdetails in beeld</h2>
+        <p>De merkfoto’s illustreren welke details je kunt vergelijken.</p>
+        <div class="gallery">
+          <figure>
+            <img src="https://luxeitfwd.com.au/cdn/shop/files/20062lv_-_louis_vuitton_speedy_25_monogramimg_4512.jpg?v=1757324979&amp;width=480" width="480" height="480" loading="lazy" decoding="async" alt="Louis Vuitton Speedy 25-handtas met bruin monogram">
+            <figcaption>Louis Vuitton Speedy 25 · hengsels en vorm</figcaption>
+          </figure>
+          <figure>
+            <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Beige Gucci-baseballpet in GG-canvas">
+            <figcaption>Gucci GG-pet · klep en pasvorm</figcaption>
+          </figure>
+          <figure>
+            <img src="https://assets.voila.id/voila/images/product/hermes/1product-H700001F-01PM-Xms-2022-10-23T1706340700.jpeg" width="480" height="480" loading="lazy" decoding="async" alt="Hermès Clic H-armband met zwart email en goudkleurige H-sluiting">
+            <figcaption>Hermès Clic H · sluiting en afwerking</figcaption>
+          </figure>
+          <figure>
+            <img src="https://assets.christiandior.com/is/image/diorprod/683M207A7040C585_SBG_E01-1?%24r9x10_raw%24=&amp;bfc=on&amp;crop=0%2C0%2C4000%2C5000&amp;hei=540&amp;qlt=78&amp;wid=500" width="500" height="540" loading="lazy" decoding="async" alt="Blauw Dior Oblique-bomberjack met patroon">
+            <figcaption>Dior Oblique · patroon en boorden</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section aria-labelledby="gidsen">
+        <h2 id="gidsen">Van productlink tot bestelling</h2>
+        <div class="articles">
+          <article>
+            <h3>OrientDig productlinks en QC-foto’s</h3>
+            <p>Open de vermelding op Weidian, Taobao of 1688 en noteer de gekozen kleur, maat en verkoper. Bewaar de bronlink en de controledatum. Zo kun je later zien of de vermelding of de gekozen uitvoering is gewijzigd.</p>
+            <p>Een QC-foto laat zien wat bij een kwaliteitscontrole is gefotografeerd. Vergelijk foto’s van dezelfde variant. Vraag bij schoenen zo nodig om een zijaanzicht, een foto van de hiel en een meting van de binnenzool.</p>
+          </article>
+          <article>
+            <h3>OrientDig maattabel en verzendkosten</h3>
+            <p>Meet een goed passend kledingstuk plat op. Vergelijk bijvoorbeeld borstbreedte met borstbreedte en kijk of de verkoper centimeters of inches gebruikt. Controleer bij sets de maten van beide delen.</p>
+            <p>Vergelijk voor Nederland en België de totaalprijs in euro. Noteer artikelprijs, eventuele kosten tot het magazijn, internationale bezorging en toepasselijke toeslagen. Controleer of de vervoerder rekent met werkelijk gewicht of volumegewicht en bekijk de retourvoorwaarden vóór betaling.</p>
+          </article>
+        </div>
+      </section>
+      <section aria-labelledby="vragen">
+        <h2 id="vragen">Veelgestelde vragen</h2>
+        <details open><summary>Wat is een OrientDig spreadsheet?</summary><p>Een OrientDig spreadsheet is een overzicht van productlinks, meestal gegroepeerd per categorie. Afhankelijk van de lijst staan er ook foto’s, maatnotities of verwijzingen naar kwaliteitscontroles bij.</p></details>
+        <details><summary>Wat als een productlink niet meer werkt?</summary><p>Zoek op de productnaam of het artikelnummer en controleer bij een nieuwe vermelding opnieuw de verkoper, kleur, maat en retourvoorwaarden.</p></details>
+        <details><summary>Bewijzen QC-foto’s dat een merkartikel echt is?</summary><p>Nee. QC-foto’s helpen zichtbare details, afmetingen en afwerking te beoordelen. Vraag voor een aankoop waarbij echtheid telt om verifieerbare herkomstinformatie.</p></details>
+        <details><summary>Waar vind ik de bezorgkosten voor Nederland of België?</summary><p>Bekijk de actuele bezorgopties bij de aanbieder voor je postcode en pakketgegevens. Controleer welke toeslagen, belastingen of invoerkosten al in het getoonde totaal zijn verwerkt.</p></details>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <a href="https://www.cafans.com">Bekijk CAFans</a>
+      <p>Onafhankelijke gids. De merkfoto’s dienen als voorbeelden van productdetails.</p>
+    </div>
+  </footer>
+</body>
+</html>
